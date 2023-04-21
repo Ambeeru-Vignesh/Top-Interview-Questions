@@ -229,14 +229,16 @@ class LinkedList {
         ListNode n2 = new ListNode(3, n3);
         ListNode n1 = new ListNode(2, n2);
         ListNode head = new ListNode(1, n1);
+        // For Loop
         // n6.next = n2;
-        // PrintList(head);
         // addNode(4, 8, head);
         // deleteNode(8, head);
         // System.out.println(detectCycle(head));
         // PrintList(head);
         // reverseLL(head);
-        palindrome(head);
+        // palindrome(head);
+
+        PrintList(head);
     }
 
 }
