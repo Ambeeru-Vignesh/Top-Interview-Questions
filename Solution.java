@@ -1,6 +1,6 @@
 import java.util.*;
 
-class ThreeSum {
+class Solution {
     public static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> tripleList = new ArrayList<List<Integer>>();
@@ -39,7 +39,7 @@ class ThreeSum {
 
     public static void main(String[] args) {
         int[] arr = { -1, 0, 1, 2, -1, -4 };
-        System.out.println(ThreeSum.threeSum(arr));
+        System.out.println(Solution.threeSum(arr));
 
     }
 

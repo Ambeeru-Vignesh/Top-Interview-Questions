@@ -221,14 +221,54 @@ class LinkedList {
 
     }
 
+    public static void MergeSortedList(ListNode list1, ListNode list2) {
+
+        ListNode head1 = list1;
+        ListNode head2 = list2;
+
+        ListNode temp1 = new ListNode(-1);
+
+        ListNode temp = temp1;
+
+        while (head1 != null && head2 != null) {
+            if (head1.value < head2.value) {
+                temp.next = head1;
+                head1 = head1.next;
+
+            } else {
+                temp.next = head2;
+                head2 = head2.next;
+
+            }
+            temp = temp.next;
+        }
+
+        while (head1 != null) {
+            temp.next = head1;
+            head1 = head1.next;
+            temp = temp.next;
+
+        }
+
+        while (head2 != null) {
+            temp.next = head2;
+            head2 = head2.next;
+            temp = temp.next;
+
+        }
+
+        PrintList(temp1.next);
+
+    }
+
     public static void main(String[] args) {
-        ListNode n6 = new ListNode(7);
-        ListNode n5 = new ListNode(6, n6);
-        ListNode n4 = new ListNode(5, n5);
-        ListNode n3 = new ListNode(4, n4);
-        ListNode n2 = new ListNode(3, n3);
-        ListNode n1 = new ListNode(2, n2);
-        ListNode head = new ListNode(1, n1);
+        // ListNode n6 = new ListNode(7);
+        // ListNode n5 = new ListNode(6, n6);
+        // ListNode n4 = new ListNode(5, n5);
+        // ListNode n3 = new ListNode(4, n4);
+        // ListNode n2 = new ListNode(3, n3);
+        // ListNode n1 = new ListNode(2, n2);
+        // ListNode head = new ListNode(1, n1);
         // For Loop
         // n6.next = n2;
         // addNode(4, 8, head);
@@ -237,8 +277,15 @@ class LinkedList {
         // PrintList(head);
         // reverseLL(head);
         // palindrome(head);
-
+        ListNode n4 = new ListNode(4);
+        ListNode n3 = new ListNode(2, n4);
+        ListNode head2 = new ListNode(1, n3);
+        ListNode n2 = new ListNode(4);
+        ListNode n1 = new ListNode(3, n2);
+        ListNode head = new ListNode(1, n1);
         PrintList(head);
+        MergeSortedList(head, head2);
+
     }
 
 }
