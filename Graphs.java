@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Graphs {
+
+    // Adjacent Matrix
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -24,4 +26,10 @@ public class Graphs {
             System.out.println();
         }
     }
+
+    // Adjacent Lists
+
+    
 }
+
+
